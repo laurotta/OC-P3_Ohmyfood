@@ -1,0 +1,19 @@
+{
+  "name": "oc-projet-3",
+  "version": "1.0.0",
+  "description": "site web  ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurotta/OC-Projet-3.git"
+  },
+  "author": "Laurent Ottaviani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurotta/OC-Projet-3/issues"
+  },
+  "homepage": "https://github.com/laurotta/OC-Projet-3#readme"
+}

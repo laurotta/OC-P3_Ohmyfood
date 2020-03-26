@@ -1,0 +1,17 @@
+body {
+    font-family: $font-sans;
+    color: $color-text;
+    background-color: $color-background;
+    margin: 0;
+}
+
+main, header, footer {
+    margin: auto;
+    max-width: 1500px;
+}
+
+a, :hover, :visited {
+    text-decoration: none;
+    color: $color-text;
+}
+

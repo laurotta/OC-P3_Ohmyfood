@@ -1,0 +1,27 @@
+#menus {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.menus__image {
+    margin: 0;
+}
+
+.contain {
+    max-width: 535px;
+    margin: 50px;
+    box-shadow: 0px 0px 16px 4px darken($color-background, 10%);
+}
+
+#space-box {
+    height: 240px;
+}
+
+#soon {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

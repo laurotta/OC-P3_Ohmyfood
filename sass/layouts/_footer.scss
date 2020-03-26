@@ -1,0 +1,12 @@
+.footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-main;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
