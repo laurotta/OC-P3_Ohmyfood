@@ -28,16 +28,165 @@ h1 {
   font-size: 2.5rem;
   font-weight: 500;
 }
+.footer__btn:hover {
+  animation: wiggle 100ms 2;
+  animation-timing-function: linear;
+}
 
-.soon__btn {
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
+@keyframes wiggle {
+  0% {
+    transform: translate(4px, 0);
+  }
+  50% {
+    transform: translate(-4px, 0);
+  }
+  100% {
+    transform: translate(4px, 0);
+  }
+}
+.soon-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 650px;
   height: 84px;
   background-color: #579c87;
   padding-top: 14px;
   border-radius: 20px;
+}
+.soon-btn p {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.soon-btn .wave {
+  position: relative;
+  text-align: center;
+  padding-top: 35px;
+  width: 100px;
+  height: 20px;
+}
+.soon-btn .wave .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 3px;
+  background: #fdcb46;
+  animation: wave 1.3s linear infinite;
+}
+.soon-btn .wave .dot:nth-child(2) {
+  animation-delay: -1.1s;
+}
+.soon-btn .wave .dot:nth-child(3) {
+  animation-delay: -0.9s;
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: initial;
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+}
+.menu-link {
+  transform: scale(1);
+  transition: transform 400ms;
+}
+
+.menu__note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 535px;
+  height: 757px;
+  margin: 50px;
+  box-shadow: 0px 0px 16px 4px #e6e6e6;
+  opacity: 1;
+  background-color: #fcdfdb;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.menu__note:hover {
+  opacity: 0.7;
+}
+.menu__note:hover .menu-link {
+  transform: scale(1.1);
+}
+.menu__chic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 535px;
+  height: 757px;
+  margin: 50px;
+  box-shadow: 0px 0px 16px 4px #e6e6e6;
+  opacity: 1;
+  background-color: #fff5fe;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.menu__chic:hover {
+  opacity: 0.7;
+}
+.menu__chic:hover .menu-link {
+  transform: scale(1.1);
+}
+.menu__delice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 535px;
+  height: 757px;
+  margin: 50px;
+  box-shadow: 0px 0px 16px 4px #e6e6e6;
+  opacity: 1;
+  background-color: #f9f9f9;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.menu__delice:hover {
+  opacity: 0.7;
+}
+.menu__delice:hover .menu-link {
+  transform: scale(1.1);
+}
+.menu__palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 535px;
+  height: 757px;
+  margin: 50px;
+  box-shadow: 0px 0px 16px 4px #e6e6e6;
+  opacity: 1;
+  background-color: #fdfffd;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.menu__palette:hover {
+  opacity: 0.7;
+}
+.menu__palette:hover .menu-link {
+  transform: scale(1.1);
 }
 
 .header {
@@ -46,6 +195,7 @@ h1 {
   align-items: center;
   background-color: #579c87;
   height: 240px;
+  border-bottom: 2px solid #a1c181;
 }
 
 .footer {
@@ -54,7 +204,8 @@ h1 {
   left: 0;
   right: 0;
   background-color: #579c87;
-  height: 240px;
+  height: 136px;
+  border-top: 2px solid #a1c181;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,18 +218,8 @@ h1 {
   justify-content: center;
 }
 
-.menus__image {
-  margin: 0;
-}
-
-.contain {
-  max-width: 535px;
-  margin: 50px;
-  box-shadow: 0px 0px 16px 4px #e6e6e6;
-}
-
 #space-box {
-  height: 240px;
+  height: 136px;
 }
 
 #soon {
