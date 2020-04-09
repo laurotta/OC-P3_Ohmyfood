@@ -1,6 +1,4 @@
 body {
-    font-family: $font-main;
-    color: $color-text;
     background-color: $color-white;
     margin: 0;
 }
@@ -10,8 +8,6 @@ main, header, footer {
     max-width: 1500px;
 }
 
-a, :hover, :visited {
-    text-decoration: none;
-    color: $color-text;
+a, a:hover, a:visited {
+    @extend %link;
 }
-
