@@ -17,11 +17,7 @@
     }
 }
 
-.line-right {
-    transform: scaleX(-1);
-}
-
-.menu-details {
+.menu-note {
     @include flexbox-col-cent;
     background-color: $color-bck-note;
     font-family: $font-others-details;
@@ -38,22 +34,16 @@
         @include flexbox-col-cent;
     }
     &__starter-header, &__maincourse-header, &__dessert-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-menu-headers;
         width: 80%;
         & p {
             margin: 0;
         }
     }
-    &__header {
-        @include flexbox-col-cent;
-        & h3 {
+    &__header .h3note {
             font-size: 3rem;
             font-family: $font-note-title;
             margin-top: 0;
-        }
     }
     &__contain {
         width: 80%;
@@ -61,7 +51,7 @@
     &__footer {
         display: flex;
         flex-direction: row;
-        & h3 {
+        & .h3note {
             font-size: 2.4rem;
             font-family: $font-note-title;
         }

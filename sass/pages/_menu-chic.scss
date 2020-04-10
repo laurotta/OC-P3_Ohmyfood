@@ -1,0 +1,100 @@
+.h3chic {
+    font-family: $font-chic-title;
+    font-size: 2.8rem;
+    background: linear-gradient(160deg, #e38913, #8f5bfe);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 9rem;
+}
+
+.line-right {
+    transform: scaleX(-1);
+}
+
+.menu-chic {
+    @include flexbox-col-cent;
+    background-color: $color-bck-chic;
+    font-family: $font-chic-details;
+    color: black;
+    width: 75%;
+    margin: 50px;
+    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
+    & h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    }
+    &__header, &__footer {
+        width: 100%;
+        @include flexbox-col-cent;
+    }
+    &__starter {
+        width: 100%;
+        @include flexbox-col-cent;
+        color: $color-chic-starter;
+    }
+    &__maincourse {
+        width: 100%;
+        @include flexbox-col-cent;
+        color: $color-chic-maincourse;
+    }
+    &__dessert {
+        width: 100%;
+        @include flexbox-col-cent;
+        color: $color-chic-dessert;
+    }
+    &__starter-header {
+        @include flex-menu-headers;
+        width: 90%;
+        & p {
+            margin: 0;
+        }
+        & .underline {
+            background: linear-gradient($color-chic-starter, $color-chic-starter);
+            background-size: 0% 4px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size .5s;
+            &:hover{
+                background-size: 100% 4px;
+            }
+        }
+    }
+    &__maincourse-header {
+        @include flex-menu-headers;
+        width: 90%;
+        & p {
+            margin: 0;
+        }
+        & .underline {
+            background: linear-gradient($color-chic-maincourse, $color-chic-maincourse);
+            background-size: 0% 4px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size .5s;
+            &:hover{
+                background-size: 100% 4px;
+            }
+        }
+    }
+    &__dessert-header {
+        @include flex-menu-headers;
+        width: 90%;
+        & p {
+            margin: 0;
+        }
+        & .underline {
+            background: linear-gradient($color-chic-dessert, $color-chic-dessert);
+            background-size: 0% 4px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size .5s;
+            &:hover{
+                background-size: 100% 4px;
+            }
+        }
+    }
+    &__contain {
+        width: 80%;
+    }
+}

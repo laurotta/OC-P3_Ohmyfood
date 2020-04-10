@@ -28,4 +28,11 @@
     @media screen and (max-width: map-get($breakpoints, mobile)){
         @content;
     }
-  }
+}
+
+@mixin flex-menu-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

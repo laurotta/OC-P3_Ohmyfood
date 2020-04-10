@@ -1,0 +1,43 @@
+.h3delice {
+    font-family: $font-delice-title;
+    font-size: 5rem;
+    background: linear-gradient(to right, #0231df, #0889fb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menu-delice {
+    @include flexbox-col-cent;
+    background-color: $color-bck-delice;
+    font-family: $font-others-details;
+    color: black;
+    width: 75%;
+    margin: 50px;
+    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
+    & h4 {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: normal;
+    }
+    &__header, &__starter, &__maincourse, &__dessert, &__footer {
+        width: 100%;
+        @include flexbox-col-cent;
+    }
+    &__starter-header, &__maincourse-header, &__dessert-header {
+        @include flex-menu-headers;
+        width: 90%;
+        & p {
+            margin: 0;
+        }
+    }
+    &__contain {
+        width: 80%;
+        & .price {
+            font-weight: normal;
+        }
+    }
+}
