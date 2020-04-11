@@ -329,6 +329,7 @@ tr {
 .txt {
   width: 88%;
   padding-right: 2%;
+  vertical-align: bottom;
 }
 
 .price {
@@ -368,7 +369,7 @@ tr {
   font-size: 1.4rem;
   text-align: center;
 }
-.menu-chic__header, .menu-chic__footer {
+.menu-chic__header {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -419,6 +420,10 @@ tr {
 .menu-chic__starter-header .underline:hover {
   background-size: 100% 4px;
 }
+.menu-chic__starter-header img {
+  width: 100%;
+  height: auto;
+}
 .menu-chic__maincourse-header {
   display: flex;
   flex-direction: row;
@@ -439,6 +444,10 @@ tr {
 .menu-chic__maincourse-header .underline:hover {
   background-size: 100% 4px;
 }
+.menu-chic__maincourse-header img {
+  width: 100%;
+  height: auto;
+}
 .menu-chic__dessert-header {
   display: flex;
   flex-direction: row;
@@ -458,6 +467,10 @@ tr {
 }
 .menu-chic__dessert-header .underline:hover {
   background-size: 100% 4px;
+}
+.menu-chic__dessert-header img {
+  width: 100%;
+  height: auto;
 }
 .menu-chic__contain {
   width: 80%;
@@ -492,7 +505,7 @@ tr {
   text-align: center;
   font-weight: normal;
 }
-.menu-delice__header, .menu-delice__starter, .menu-delice__maincourse, .menu-delice__dessert, .menu-delice__footer {
+.menu-delice__header, .menu-delice__starter, .menu-delice__maincourse, .menu-delice__dessert {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -545,7 +558,7 @@ tr {
   text-align: center;
   font-weight: normal;
 }
-.menu-palette__header, .menu-palette__starter, .menu-palette__maincourse, .menu-palette__dessert, .menu-palette__footer {
+.menu-palette__header, .menu-palette__starter, .menu-palette__maincourse, .menu-palette__dessert {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -561,6 +574,10 @@ tr {
 }
 .menu-palette__starter-header p, .menu-palette__maincourse-header p, .menu-palette__dessert-header p {
   margin: 0;
+}
+.menu-palette__starter-header img, .menu-palette__maincourse-header img, .menu-palette__dessert-header img {
+  width: 100%;
+  height: auto;
 }
 .menu-palette__contain {
   width: 80%;

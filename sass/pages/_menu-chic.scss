@@ -24,7 +24,7 @@
     font-size: 1.4rem;
     text-align: center;
     }
-    &__header, &__footer {
+    &__header {
         width: 100%;
         @include flexbox-col-cent;
     }
@@ -59,6 +59,10 @@
                 background-size: 100% 4px;
             }
         }
+        & img {
+            width: 100%;
+            height: auto;
+        }
     }
     &__maincourse-header {
         @include flex-menu-headers;
@@ -76,6 +80,10 @@
                 background-size: 100% 4px;
             }
         }
+        & img {
+            width: 100%;
+            height: auto;
+        }
     }
     &__dessert-header {
         @include flex-menu-headers;
@@ -92,6 +100,10 @@
             &:hover{
                 background-size: 100% 4px;
             }
+        }
+        & img {
+            width: 100%;
+            height: auto;
         }
     }
     &__contain {

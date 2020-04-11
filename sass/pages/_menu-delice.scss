@@ -23,7 +23,7 @@
     text-align: center;
     font-weight: normal;
     }
-    &__header, &__starter, &__maincourse, &__dessert, &__footer {
+    &__header, &__starter, &__maincourse, &__dessert, {
         width: 100%;
         @include flexbox-col-cent;
     }
