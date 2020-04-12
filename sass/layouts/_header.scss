@@ -1,10 +1,13 @@
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox-col-cent;
     background-color: $color-main;
     font-family: $font-main;
     color: $color-text;
     height: 240px;
     border-bottom: 2px solid $color-main-light;
+    & h1 {
+        @include mobile-only {
+            font-size: 3.5rem;
+        }
+    }
 }

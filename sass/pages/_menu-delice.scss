@@ -8,6 +8,11 @@
     margin-top: 9rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    @include mobile-only {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 5rem;
+    }
 }
 
 .menu-delice {
@@ -18,10 +23,18 @@
     width: 75%;
     margin: 50px;
     box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
+    @include mobile-only {
+        min-width: 320px;
+        }
     & h4 {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: normal;
+    @include mobile-only {
+        font-size: 1.9rem;
+        margin-left: 3px;
+        margin-right: 3px;
+        }
     }
     &__header, &__starter, &__maincourse, &__dessert {
         width: 100%;
@@ -33,11 +46,32 @@
         & p {
             margin: 0;
         }
+        & img {
+            width: 100%;
+            height: auto;
+        }
     }
     &__contain {
         width: 80%;
-        & .price {
-            font-weight: normal;
+    }
+    & .txt {
+        width: 88%;
+        padding-right: 2%;
+        padding-bottom: 1rem;
+        vertical-align: bottom;
+        @include mobile-only {
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
+        }
+    }
+    & .price {
+        width: 10%;
+        padding-bottom: 1rem;
+        text-align: right;
+        vertical-align: bottom;
+        @include mobile-only {
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
         }
     }
 }

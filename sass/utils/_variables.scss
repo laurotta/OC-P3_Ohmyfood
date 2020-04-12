@@ -16,6 +16,10 @@ $font-chic-title: 'Croissant One', cursive;
 $font-note-title: 'Devonshire', cursive;
 $font-delice-title: 'Dancing Script', cursive;
 $font-palette-title: 'Kaushan Script', cursive;
-$font-others-details: cursive;
+$font-others-details: 'Caveat', cursive;
 
-$breakpoints: (mobile: 599px);
+$breakpoints: (mobile: 600px);
+
+$width-small: 600px;
+$width-medium: 900px;
+$width-large: 1200px;

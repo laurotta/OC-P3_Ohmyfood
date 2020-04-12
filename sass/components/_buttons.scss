@@ -14,108 +14,24 @@
     100% { transform: translate(4px, 0); }
 }
 
-.soon-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 650px;
-    height: 84px;
-    background-color: $color-main;
-    padding-top: 14px;
-    border-radius: 20px;
-    p {
-        font-family: $font-main;
-        color: $color-text;
-        font-size: 3rem;
-        font-weight: 500;
-        text-align: center;
-        margin: 0;
-    }
-    .wave {
-	position: relative;
-    text-align: center;
-    padding-top: 39px;
-	width: 100px;
-	height: 20px;
-        .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 3px;
-            background: $color-text;
-            animation: wave 1.3s linear infinite;
-
-            &:nth-child(2) {
-                animation-delay: -1.1s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: -0.9s;
-            }
-        }
-    }
-}
-
-@keyframes wave {
-	0%, 60%, 100% {
-		transform: initial;
-	}
-
-	30% {
-		transform: translateY(-15px);
-	}
-}
-
-
-.menu-link {
-    transform: scale(1);
-    transition: transform 400ms;
-}
-
 .menu {
-    &__note {
+    &__note, &__chic, &__delice, &__palette {
         @include menu-item-style;
-        background-color: $color-bck-note;
         @include opacity-shift(opacity, 0.4s, ease-in-out);
         &:hover {
             opacity: 0.7;
-            .menu-link {
-                transform: scale(1.1);
-            }
         }
+    }
+    &__note {
+        background-color: $color-bck-note;
     }
     &__chic {
-        @include menu-item-style;
         background-color: $color-bck-chic;
-        @include opacity-shift(opacity, 1s, ease-in-out);
-        &:hover {
-            opacity: 0.7;
-            .menu-link {
-                transform: scale(1.1);
-            }
-        }
     }
     &__delice {
-        @include menu-item-style;
         background-color: $color-bck-delice;
-        @include opacity-shift(opacity, 1s, ease-in-out);
-        &:hover {
-            opacity: 0.7;
-            .menu-link {
-                transform: scale(1.1);
-            }
-        }
     }
     &__palette {
-        @include menu-item-style;
         background-color: $color-bck-palette;
-        @include opacity-shift(opacity, 1s, ease-in-out);
-        &:hover {
-            opacity: 0.7;
-            .menu-link {
-                transform: scale(1.1);
-            }
-        }
     }
 }

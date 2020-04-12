@@ -11,3 +11,14 @@ main, header, footer {
 a, a:hover, a:visited {
     @extend %link;
 }
+
+table {
+    margin-bottom: 5rem;
+    @include mobile-only {
+        margin-bottom: 1rem;
+    }
+}
+
+tr {
+    height: 4rem;
+}

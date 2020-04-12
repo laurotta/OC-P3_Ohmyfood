@@ -12,4 +12,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    &__btn {
+        @include mobile-only {
+            font-size: 1.5rem;
+        }
+    }
 }
