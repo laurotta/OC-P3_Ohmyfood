@@ -1,16 +1,41 @@
-@mixin menu-item-style {
+@mixin shadow {
+    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
+}
+
+@mixin flex-col-cent {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@mixin flex-menu-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin menu-item-style {
     width: 535px;
     height: 757px;
     margin: 50px;
-    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
     opacity: 1;
+    @include flex-col-cent;
+    @include shadow;
     @include mobile-only {
         min-width: 320px;
         height: 500px;
         margin: 40px 20px 40px 20px;
+    }
+}
+
+@mixin menu-details-style {
+    width: 75%;
+    margin: 50px;
+    @include shadow;
+    @include mobile-only {
+        min-width: 320px;
     }
 }
 
@@ -22,22 +47,8 @@
     transition: $property $time $method;
 }
 
-@mixin flexbox-col-cent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 @mixin mobile-only {
     @media all and (max-width: map-get($breakpoints, mobile)){
         @content;
     }
-}
-
-@mixin flex-menu-headers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }

@@ -1,0 +1,16 @@
+/*=========================*/
+/* paramètres page "légal" */
+/*=========================*/
+#legal {
+    & h2 {
+        margin: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    & p {
+    font-size: 1.5rem;
+    font-family: $font-main;
+    text-align: justify;
+    margin: 2rem;
+    }
+}

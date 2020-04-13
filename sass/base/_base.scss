@@ -1,24 +1,20 @@
+/* fond foncé pour faire ressortir la maquette */
 body {
-    background-color: $color-white;
+    background-color: #212121;
     margin: 0;
 }
 
+main {
+    background-color: $color-white;
+}
+
+/* largeur de la maquette */
 main, header, footer {
     margin: auto;
     max-width: 1500px;
 }
 
+/* style des liens */
 a, a:hover, a:visited {
     @extend %link;
-}
-
-table {
-    margin-bottom: 5rem;
-    @include mobile-only {
-        margin-bottom: 1rem;
-    }
-}
-
-tr {
-    height: 4rem;
 }

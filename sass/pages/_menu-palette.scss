@@ -1,30 +1,27 @@
-.h3palette {
-    font-family: $font-palette-title;
-    font-size: 6rem;
-    background: linear-gradient(120deg, #3d923a, #beff7f);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 9rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    @include mobile-only {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 5rem;
-    }
-}
-
+/*=========================================*/
+/* paramètres du menu "la palette du goût" */
+/*=========================================*/
 .menu-palette {
-    @include flexbox-col-cent;
+    @include flex-col-cent;
     background-color: $color-bck-palette;
     font-family: $font-others-details;
     color: black;
-    width: 75%;
-    margin: 50px;
-    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
-    @include mobile-only {
-        min-width: 320px;
+    @include menu-details-style;
+    & h3 {
+        font-family: $font-palette-title;
+        font-size: 6rem;
+        background: linear-gradient(120deg, #3d923a, #beff7f);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 9rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include mobile-only {
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
     }
     & h4 {
     font-size: 2.5rem;
@@ -38,7 +35,7 @@
     }
     &__header, &__starter, &__maincourse, &__dessert {
         width: 100%;
-        @include flexbox-col-cent;
+        @include flex-col-cent;
     }
     &__starter-header, &__maincourse-header, &__dessert-header {
         @include flex-menu-headers;

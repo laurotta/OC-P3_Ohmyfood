@@ -1,32 +1,26 @@
-.h3chic {
-    font-family: $font-chic-title;
-    font-size: 2.8rem;
-    background: -webkit-linear-gradient(160deg, #e38913, #8f5bfe);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 9rem;
-    @include mobile-only {
-        font-size: 1.5rem;
-        text-align: center;
-        margin-top: 5rem;
-    }
-}
-
-.line-right {
-    transform: scaleX(-1);
-}
-
+/*=============================================*/
+/* paramètres du menu "le chic à la française" */
+/*=============================================*/
 .menu-chic {
-    @include flexbox-col-cent;
+    @include flex-col-cent;
     background-color: $color-bck-chic;
     font-family: $font-chic-details;
     color: black;
-    width: 75%;
-    margin: 50px;
-    box-shadow: 0px 0px 16px 4px darken($color-white, 10%);
-    @include mobile-only {
-        min-width: 320px;
+    @include menu-details-style;
+    & h3 {
+        font-family: $font-chic-title;
+        font-size: 3.5rem;
+        background: -webkit-linear-gradient(160deg, #e38913, #8f5bfe);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+        @include mobile-only {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
     }
     & h4 {
     font-size: 1.6rem;
@@ -37,7 +31,7 @@
     }
     &__header, &__starter, &__maincourse, &__dessert {
         width: 100%;
-        @include flexbox-col-cent;
+        @include flex-col-cent;
     }
     &__starter {
         color: $color-chic-starter;

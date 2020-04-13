@@ -1,32 +1,27 @@
+@charset "UTF-8";
 a, a:hover, a:visited {
   text-decoration: none;
   color: #fdcb46;
   outline: none;
 }
 
+/* fond foncé pour faire ressortir la maquette */
 body {
-  background-color: #fff;
+  background-color: #212121;
   margin: 0;
 }
 
+main {
+  background-color: #fff;
+}
+
+/* largeur de la maquette */
 main, header, footer {
   margin: auto;
   max-width: 1500px;
 }
 
-table {
-  margin-bottom: 5rem;
-}
-@media all and (max-width: 600px) {
-  table {
-    margin-bottom: 1rem;
-  }
-}
-
-tr {
-  height: 4rem;
-}
-
+/* style des liens */
 h1 {
   font-size: 6rem;
   font-weight: 700;
@@ -51,6 +46,10 @@ table {
   font-size: 2rem;
 }
 
+/*======================*/
+/* boutons pied de page */
+/*======================*/
+/* avec animation type wiggle sur hover*/
 .footer__btn {
   margin: 42px;
   font-size: 2.5rem;
@@ -72,15 +71,44 @@ table {
     transform: translate(4px, 0);
   }
 }
-.menu__note, .menu__chic, .menu__delice, .menu__palette {
+/*===============*/
+/* items de menu */
+/*===============*/
+/* effet de zoom + fondu par réduction d'opacité sur l'image */
+#menus a {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+@media all and (max-width: 600px) {
+  #menus a {
+    font-size: 3.5rem;
+    transform: scale(0.7);
+  }
+}
+#menus a:hover {
+  transform: scale(1.1);
+}
+@media all and (max-width: 600px) {
+  #menus a:hover {
+    transform: scale(0.7);
+  }
+}
+#menus > div {
   width: 535px;
   height: 757px;
   margin: 50px;
-  box-shadow: 0px 0px 16px 4px #e6e6e6;
   opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 16px 4px #e6e6e6;
   -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
   -ms-transition: opacity 0.4s ease-in-out;
@@ -88,15 +116,17 @@ table {
   transition: opacity 0.4s ease-in-out;
 }
 @media all and (max-width: 600px) {
-  .menu__note, .menu__chic, .menu__delice, .menu__palette {
+  #menus > div {
     min-width: 320px;
     height: 500px;
     margin: 40px 20px 40px 20px;
   }
 }
-.menu__note:hover, .menu__chic:hover, .menu__delice:hover, .menu__palette:hover {
+#menus > div:hover {
   opacity: 0.7;
 }
+
+/* couleur de fond items */
 .menu__note {
   background-color: #fcdfdb;
 }
@@ -110,6 +140,9 @@ table {
   background-color: #fdfffd;
 }
 
+/*================*/
+/* entête du site */
+/*================*/
 .header {
   display: flex;
   flex-direction: column;
@@ -127,6 +160,9 @@ table {
   }
 }
 
+/*======================================*/
+/* pied du site qui doit rester visible */
+/*======================================*/
 .footer {
   position: fixed;
   bottom: 0;
@@ -148,34 +184,19 @@ table {
   }
 }
 
+/* disposition des items de menu */
 #menus {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-#menus a {
-  transform: scale(1);
-  transition: transform 400ms;
-}
-@media all and (max-width: 600px) {
-  #menus a {
-    font-size: 3.5rem;
-    transform: scale(0.7);
-  }
-}
-#menus a:hover {
-  transform: scale(1.1);
-}
-@media all and (max-width: 600px) {
-  #menus a:hover {
-    transform: scale(0.7);
-  }
-}
 
+/* espaceur correspondant à la taille du footer qui doit rester fixe */
 #space-box {
   height: 136px;
 }
 
+/* section "prochainement" avec animation des points de suspension du type vague */
 .soon {
   height: 240px;
   display: flex;
@@ -257,6 +278,25 @@ table {
     transform: translateY(-15px);
   }
 }
+/*=========================*/
+/* paramètres page "légal" */
+/*=========================*/
+#legal h2 {
+  margin: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+#legal p {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  margin: 2rem;
+}
+
+/*======================================*/
+/* paramètres communs aux pages de menu */
+/*======================================*/
+/* style du corps */
 #menu-box {
   display: flex;
   flex-direction: column;
@@ -268,6 +308,7 @@ table {
   margin-bottom: 0;
 }
 
+/* ligne animée (hover) sous le titre des sections du menu */
 .underline {
   background: linear-gradient(#000000, #000000);
   background-size: 0% 4px;
@@ -279,6 +320,31 @@ table {
   background-size: 100% 4px;
 }
 
+/* miroir de l'image de décor du titre de section */
+.line-right {
+  transform: scaleX(-1);
+}
+
+/* style du tableau contenant mets et prix */
+table {
+  margin-bottom: 5rem;
+}
+@media all and (max-width: 600px) {
+  table {
+    margin-bottom: 1rem;
+  }
+}
+table tr {
+  height: 4rem;
+}
+
+.dishes {
+  width: 100%;
+}
+
+/*========================================*/
+/* paramètres du menu "la note enchantée" */
+/*========================================*/
 .menu-note {
   display: flex;
   flex-direction: column;
@@ -328,13 +394,13 @@ table {
   width: 100%;
   height: auto;
 }
-.menu-note__header .h3note {
+.menu-note__header h3 {
   font-size: 3rem;
   font-family: "Devonshire", cursive;
   margin-top: 0;
 }
 @media all and (max-width: 600px) {
-  .menu-note__header .h3note {
+  .menu-note__header h3 {
     font-size: 2rem;
   }
 }
@@ -384,31 +450,9 @@ table {
   }
 }
 
-.dishes {
-  width: 100%;
-}
-
-.h3chic {
-  font-family: "Croissant One", cursive;
-  font-size: 2.8rem;
-  background: -webkit-linear-gradient(160deg, #e38913, #8f5bfe);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 9rem;
-}
-@media all and (max-width: 600px) {
-  .h3chic {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 5rem;
-  }
-}
-
-.line-right {
-  transform: scaleX(-1);
-}
-
+/*=============================================*/
+/* paramètres du menu "le chic à la française" */
+/*=============================================*/
 .menu-chic {
   display: flex;
   flex-direction: column;
@@ -424,6 +468,23 @@ table {
 @media all and (max-width: 600px) {
   .menu-chic {
     min-width: 320px;
+  }
+}
+.menu-chic h3 {
+  font-family: "Croissant One", cursive;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(160deg, #e38913, #8f5bfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+@media all and (max-width: 600px) {
+  .menu-chic h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
   }
 }
 .menu-chic h4 {
@@ -553,25 +614,9 @@ table {
   }
 }
 
-.h3delice {
-  font-family: "Dancing Script", cursive;
-  font-size: 5rem;
-  background: linear-gradient(to right, #0231df, #0889fb);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 9rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media all and (max-width: 600px) {
-  .h3delice {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 5rem;
-  }
-}
-
+/*=============================================*/
+/* paramètres du menu "le délice des papilles" */
+/*=============================================*/
 .menu-delice {
   display: flex;
   flex-direction: column;
@@ -587,6 +632,24 @@ table {
 @media all and (max-width: 600px) {
   .menu-delice {
     min-width: 320px;
+  }
+}
+.menu-delice h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  background: linear-gradient(to right, #0231df, #0889fb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 9rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media all and (max-width: 600px) {
+  .menu-delice h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
   }
 }
 .menu-delice h4 {
@@ -650,25 +713,9 @@ table {
   }
 }
 
-.h3palette {
-  font-family: "Kaushan Script", cursive;
-  font-size: 6rem;
-  background: linear-gradient(120deg, #3d923a, #beff7f);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 9rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media all and (max-width: 600px) {
-  .h3palette {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 5rem;
-  }
-}
-
+/*=========================================*/
+/* paramètres du menu "la palette du goût" */
+/*=========================================*/
 .menu-palette {
   display: flex;
   flex-direction: column;
@@ -684,6 +731,24 @@ table {
 @media all and (max-width: 600px) {
   .menu-palette {
     min-width: 320px;
+  }
+}
+.menu-palette h3 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 6rem;
+  background: linear-gradient(120deg, #3d923a, #beff7f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 9rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media all and (max-width: 600px) {
+  .menu-palette h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
   }
 }
 .menu-palette h4 {

@@ -1,30 +1,19 @@
+/* disposition des items de menu */
 #menus {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    & a {
-        transform: scale(1);
-        transition: transform 400ms;
-        @include mobile-only {
-            font-size: 3.5rem;
-            transform: scale(0.7);
-        }
-        &:hover {
-            transform: scale(1.1);
-            @include mobile-only {
-                transform: scale(0.7);
-            }
-        }
-    }
 }
 
+/* espaceur correspondant à la taille du footer qui doit rester fixe */
 #space-box {
     height: 136px;
 }
 
+/* section "prochainement" avec animation des points de suspension du type vague */
 .soon {
     height: 240px;
-    @include flexbox-col-cent;
+    @include flex-col-cent;
     &__contain {
         display: flex;
         flex-direction: row;
@@ -85,7 +74,6 @@
         }
     }
 }
-
 @keyframes wave {
 	0%, 60%, 100% {
 		transform: initial;

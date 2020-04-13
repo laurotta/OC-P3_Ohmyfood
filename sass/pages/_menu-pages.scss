@@ -1,0 +1,42 @@
+/*======================================*/
+/* paramètres communs aux pages de menu */
+/*======================================*/
+/* style du corps */
+#menu-box {
+    @include flex-col-cent;
+    & h2 {
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+}
+
+/* ligne animée (hover) sous le titre des sections du menu */
+.underline {
+    background: linear-gradient(#000000, #000000);
+    background-size: 0% 4px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .5s;
+    &:hover{
+        background-size: 100% 4px;
+    }
+}
+
+/* miroir de l'image de décor du titre de section */
+.line-right {
+    transform: scaleX(-1);
+}
+
+/* style du tableau contenant mets et prix */
+table {
+    margin-bottom: 5rem;
+    @include mobile-only {
+        margin-bottom: 1rem;
+    }
+    & tr {
+    height: 4rem;
+    }
+}
+.dishes {
+    width: 100%;
+}
