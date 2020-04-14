@@ -460,7 +460,6 @@ table tr {
   align-items: center;
   background-color: #fff5fe;
   font-family: "Noto Serif", serif;
-  color: black;
   width: 75%;
   margin: 50px;
   box-shadow: 0px 0px 16px 4px #e6e6e6;
@@ -737,7 +736,6 @@ table tr {
   font-family: "Kaushan Script", cursive;
   font-size: 6rem;
   background: linear-gradient(120deg, #3d923a, #beff7f);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 9rem;
