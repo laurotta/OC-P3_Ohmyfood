@@ -5,7 +5,7 @@ body {
 }
 
 main {
-    background-color: $color-white;
+    background-color: $color-bck-main;
 }
 
 /* largeur de la maquette */
@@ -16,5 +16,7 @@ main, header, footer {
 
 /* style des liens */
 a, a:hover, a:visited {
-    @extend %link;
+    text-decoration: none;
+    color: $color-text;
+    outline: none;
 }

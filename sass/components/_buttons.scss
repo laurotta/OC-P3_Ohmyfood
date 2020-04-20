@@ -7,50 +7,48 @@
     font-size: 2.5rem;
     font-weight: 500;
     &:hover{ 
-        animation: wiggle 100ms 2;
+        animation: wiggle 100ms 2;                              // tempo + répétition
         animation-timing-function: linear;   
       }
 }
-@keyframes wiggle {
-    0% { transform: translate(4px, 0); }
-    50% { transform: translate(-4px, 0); }
-    100% { transform: translate(4px, 0); }
+@keyframes wiggle {                                             // déroulement de l'effet : décalage de 4px 
+    0% { transform: translate(4px, 0); }                        // ->droite->centre
+    50% { transform: translate(-4px, 0); }                      // ->gauche->centre
+    100% { transform: translate(4px, 0); }                      // ->droite->centre
 }
 
 /*===============*/
 /* items de menu */
 /*===============*/
-/* effet de zoom + fondu par réduction d'opacité sur l'image */
-#menus {
+/* effet zoom + fondu par réduction d'opacité */
+.menu-items {
     & a {
         width: 100%;
         height: 100%;
         @include flex-col-cent;
         transform: scale(1);
-        transition: transform 400ms;
+        transition: transform 400ms;                            // durée effet zoom
         @include mobile-only {
-            font-size: 3.5rem;
             transform: scale(0.7);
         }
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.1);                              // augmentation de la taille
             @include mobile-only {
-                transform: scale(0.7);
+                transform: scale(0.7);                          // pas d'effet en mode mobile
             }
         }
     }
     & > div {
         @include menu-item-style;
-        @include opacity-shift(opacity, 0.4s, ease-in-out);
+        @include opacity-shift(opacity, 0.4s, ease-in-out);     // effet sur l'opacité
         &:hover {
-            opacity: 0.7;
+            opacity: 0.7;                                       // réduction d'opacité
+            @include mobile-only {
+                opacity: 1;                                     // pas d'effet en mode mobile
+            }
         }
     }
-}
-
-/* couleur de fond items */
-.menu {
-    &__note {
+    &__note {                                                   // couleur de fond de chaque item
         background-color: $color-bck-note;
     }
     &__chic {

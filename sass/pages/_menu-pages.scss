@@ -12,7 +12,7 @@
 
 /* ligne animée (hover) sous le titre des sections du menu */
 .underline {
-    background: linear-gradient(#000000, #000000);
+    background: linear-gradient(#000000, #000000);          // permet de créer un fond noir de type image pour pouvoir agir sur sa taille et sa position
     background-size: 0% 4px;
     background-repeat: no-repeat;
     background-position: left bottom;
