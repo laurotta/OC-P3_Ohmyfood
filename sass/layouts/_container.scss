@@ -61,6 +61,7 @@
                 @include mobile-only {
                     width: 6px;
                     height: 6px;
+                    margin-right: 1px;
                 }
 
                 &:nth-child(2) {
@@ -74,11 +75,11 @@
         }
     }
 }
-@keyframes wave {                                               // position initiale puis déplacement vertical d'amplitude 15px (maxi au bout de 30%) pour un retour au bout de 60%
+@keyframes wave {                                               // position initiale puis déplacement vertical d'amplitude 100% (maxi au bout de 30%) pour un retour au bout de 60%
 	0%, 60%, 100% {
 		transform: initial;
 	}
 	30% {
-		transform: translateY(-15px);
-	}
+        transform: translateY(-100%);
+    }
 }
