@@ -36,15 +36,17 @@
 }
 
 @mixin opacity-shift($property, $time, $method) {
-    -webkit-transition: $property $time $method;
-    -moz-transition: $property $time $method;
-    -ms-transition: $property $time $method;
-    -o-transition: $property $time $method;
     transition: $property $time $method;
 }
 
 @mixin mobile-only {
     @media all and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media all and (max-width: map-get($breakpoints, tablet)){
         @content;
     }
 }

@@ -16,8 +16,11 @@
     justify-content: space-between;
     align-items: center;
     &__btn {
+        @include tablet-only {
+            font-size: 1.8rem;
+        }
         @include mobile-only {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     }
 }

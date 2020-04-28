@@ -40,7 +40,7 @@
     }
     & > div {
         @include menu-item-style;
-        @include opacity-shift(opacity, 0.4s, ease-in-out);     // effet sur l'opacité
+        @include opacity-shift(opacity, 0.4s, ease-in-out);     // effet sur l'opacité, l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin
         &:hover {
             opacity: 0.7;                                       // réduction d'opacité
             @include mobile-only {
@@ -50,14 +50,82 @@
     }
     &__note {                                                   // couleur de fond de chaque item
         background-color: $color-bck-note;
+        & h3 {
+            font-family: $font-note-title;
+            font-size: 3rem;
+            color: black;
+            margin-top: 0;
+        }
+        & h4 {
+            font-family: $font-others-details;
+            font-size: 4rem;
+            font-weight: 700;
+            color: black;
+            margin: 0;
+        }
     }
     &__chic {
         background-color: $color-bck-chic;
+        & h3 {
+            font-family: $font-chic-title;
+            font-size: 2.1rem;
+            background: -webkit-linear-gradient(160deg, $color-chic-starter, $color-chic-dessert);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0;
+            @include mobile-only {
+                font-size: 1.6rem;
+            }
+        }
+        & h4 {
+            font-family: $font-chic-details;
+            font-size: 3.5rem;
+            color: $color-chic-starter;
+            margin: 0;
+        }
     }
     &__delice {
         background-color: $color-bck-delice;
+        & h3 {
+            font-family: $font-delice-title;
+            font-size: 3rem;
+            background: linear-gradient(to right, $color-gradient-delice-1, $color-gradient-delice-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include mobile-only {
+                font-size: 2.3rem;
+            }
+        }
+        & h4 {
+            font-family: $font-others-details;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $color-gradient-delice-2;
+            margin: 0;
+        }
     }
     &__palette {
         background-color: $color-bck-palette;
+        & h3 {
+            font-family: $font-palette-title;
+            font-size: 3rem;
+            background: linear-gradient(120deg, $color-gradient-palette-1, $color-gradient-palette-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0;
+            @include mobile-only {
+                font-size: 2.4rem;
+            }
+        }
+        & h4 {
+            font-family: $font-others-details;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $color-menu-palette;
+            margin: 0;
+        }
     }
 }

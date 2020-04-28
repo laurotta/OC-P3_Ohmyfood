@@ -10,15 +10,18 @@
     & h3 {
         font-family: $font-delice-title;
         font-size: 5rem;
-        background: linear-gradient(to right, #0231df, #0889fb);
+        background: linear-gradient(to right, $color-gradient-delice-1, $color-gradient-delice-2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-align: center;
         margin-top: 9rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        @include tablet-only {
+            font-size: 3.5rem;
+        }
         @include mobile-only {
             font-size: 2rem;
-            text-align: center;
             margin-top: 5rem;
         }
     }

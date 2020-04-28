@@ -10,15 +10,18 @@
     & h3 {
         font-family: $font-palette-title;
         font-size: 6rem;
-        background: linear-gradient(120deg, #3d923a, #beff7f);
+        background: linear-gradient(120deg, $color-gradient-palette-1, $color-gradient-palette-2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-align: center;
         margin-top: 9rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        @include tablet-only {
+            font-size: 3.5rem;
+        }
         @include mobile-only {
             font-size: 2rem;
-            text-align: center;
             margin-top: 5rem;
         }
     }

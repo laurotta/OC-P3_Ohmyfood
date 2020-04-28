@@ -3,12 +3,18 @@ $color-main: #579c87;
 $color-main-light: #a1c181;
 $color-text: #fdcb46;
 $color-bck-palette: #fdfffd;
+$color-gradient-palette-1: #3d923a;
+$color-gradient-palette-2: #beff7f;
+$color-menu-palette: #72bf56;
 $color-bck-delice: #f9f9f9;
+$color-gradient-delice-1: #0231df;
+$color-gradient-delice-2: #0889fb;
 $color-bck-chic: #fff5fe;
 $color-bck-note: #fcdfdb;
 $color-chic-starter: #c67412;
 $color-chic-maincourse: #a56799;
 $color-chic-dessert: #6e4ccc;
+
 
 $font-main: 'Poppins', sans-serif;
 $font-chic-details: 'Noto Serif', serif;
@@ -18,4 +24,4 @@ $font-delice-title: 'Dancing Script', cursive;
 $font-palette-title: 'Kaushan Script', cursive;
 $font-others-details: 'Caveat', cursive;
 
-$breakpoints: (mobile: 600px);
+$breakpoints: (mobile: 600px, tablet: 900px);

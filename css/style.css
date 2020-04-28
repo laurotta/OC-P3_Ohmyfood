@@ -109,10 +109,6 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-transition: opacity 0.4s ease-in-out;
-  -moz-transition: opacity 0.4s ease-in-out;
-  -ms-transition: opacity 0.4s ease-in-out;
-  -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 @media all and (max-width: 600px) {
@@ -133,14 +129,88 @@ table {
 .menu-items__note {
   background-color: #fcdfdb;
 }
+.menu-items__note h3 {
+  font-family: "Devonshire", cursive;
+  font-size: 3rem;
+  color: black;
+  margin-top: 0;
+}
+.menu-items__note h4 {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
 .menu-items__chic {
   background-color: #fff5fe;
+}
+.menu-items__chic h3 {
+  font-family: "Croissant One", cursive;
+  font-size: 2.1rem;
+  background: -webkit-linear-gradient(160deg, #c67412, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+}
+@media all and (max-width: 600px) {
+  .menu-items__chic h3 {
+    font-size: 1.6rem;
+  }
+}
+.menu-items__chic h4 {
+  font-family: "Noto Serif", serif;
+  font-size: 3.5rem;
+  color: #c67412;
+  margin: 0;
 }
 .menu-items__delice {
   background-color: #f9f9f9;
 }
+.menu-items__delice h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  background: linear-gradient(to right, #0231df, #0889fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media all and (max-width: 600px) {
+  .menu-items__delice h3 {
+    font-size: 2.3rem;
+  }
+}
+.menu-items__delice h4 {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #0889fb;
+  margin: 0;
+}
 .menu-items__palette {
   background-color: #fdfffd;
+}
+.menu-items__palette h3 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+  background: linear-gradient(120deg, #3d923a, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+}
+@media all and (max-width: 600px) {
+  .menu-items__palette h3 {
+    font-size: 2.4rem;
+  }
+}
+.menu-items__palette h4 {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #72bf56;
+  margin: 0;
 }
 
 /*================*/
@@ -181,9 +251,14 @@ table {
   justify-content: space-between;
   align-items: center;
 }
+@media all and (max-width: 900px) {
+  .footer__btn {
+    font-size: 1.8rem;
+  }
+}
 @media all and (max-width: 600px) {
   .footer__btn {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -476,16 +551,21 @@ table tr {
 .menu-chic h3 {
   font-family: "Croissant One", cursive;
   font-size: 3.5rem;
-  background: -webkit-linear-gradient(160deg, #e38913, #8f5bfe);
+  background: -webkit-linear-gradient(160deg, #c67412, #6e4ccc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
   margin-top: 10rem;
   margin-bottom: 5rem;
+}
+@media all and (max-width: 900px) {
+  .menu-chic h3 {
+    font-size: 2.6rem;
+  }
 }
 @media all and (max-width: 600px) {
   .menu-chic h3 {
     font-size: 1.5rem;
-    text-align: center;
     margin-top: 5rem;
   }
 }
@@ -642,14 +722,19 @@ table tr {
   background: linear-gradient(to right, #0231df, #0889fb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
   margin-top: 9rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media all and (max-width: 900px) {
+  .menu-delice h3 {
+    font-size: 3.5rem;
+  }
+}
 @media all and (max-width: 600px) {
   .menu-delice h3 {
     font-size: 2rem;
-    text-align: center;
     margin-top: 5rem;
   }
 }
@@ -740,14 +825,19 @@ table tr {
   background: linear-gradient(120deg, #3d923a, #beff7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
   margin-top: 9rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media all and (max-width: 900px) {
+  .menu-palette h3 {
+    font-size: 3.5rem;
+  }
+}
 @media all and (max-width: 600px) {
   .menu-palette h3 {
     font-size: 2rem;
-    text-align: center;
     margin-top: 5rem;
   }
 }
